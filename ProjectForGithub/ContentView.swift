@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentView: View {
     
     @State var text: String = "chain"
-    
+    @State var textTwo: String = "chain"
+
     var body: some View {
         VStack {
             Image(systemName: "heart")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello my Friends!")
+            Text(textTwo)
             Text(text)
         }
         .padding()

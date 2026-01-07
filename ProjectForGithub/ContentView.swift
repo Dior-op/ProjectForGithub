@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var text: String = "Lets go"
+    @State var text: String = "Main"
     
     var body: some View {
         VStack {

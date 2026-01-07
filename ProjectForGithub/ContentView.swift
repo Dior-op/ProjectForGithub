@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var text: String = "chain"
-    @State var textTwo: String = "chain"
+    @State var textTwo: String = "main histore"
 
     var body: some View {
         VStack {

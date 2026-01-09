@@ -219,3 +219,14 @@ struct UITextFiledViewRepresentable: UIViewRepresentable {
         return textfield
     }
 }
+
+protocol ColorThemeProtocol {
+    var primary: Color { get set }
+    var secondary: Color { get set }
+}
+
+struct DefauldAnather: ColorThemeProtocol {
+    var primary: Color = .red
+    var secondary: Color = .blue
+
+}

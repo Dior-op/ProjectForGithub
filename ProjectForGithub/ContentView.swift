@@ -23,7 +23,6 @@ struct ContentView: View {
                 UITextFiledViewRepresentable(textUIkit: $textUIkit)
                     .background(Color.gray)
                     .frame(height: 45)
-
             }
 
             HStack {
@@ -100,9 +99,6 @@ class MainScreenViewModel: ObservableObject {
     }
 }
 
-
-
-
 struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -120,7 +116,6 @@ struct ButtonAnatherStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .animation(.easeInOut(duration: 0.15),
                        value: configuration.isPressed)
-
     }
 }
 
@@ -133,7 +128,6 @@ struct RotateViewModefier: ViewModifier {
             .offset(
                 x: rotation != 0 ? UIScreen.main.bounds.width : 0,
                 y: rotation != 0 ? UIScreen.main.bounds.width : 0
-
             )
     }
 }
@@ -163,6 +157,7 @@ class GenericsViewModel: ObservableObject {
     }
 
 }
+
 struct GenericModel<T> {
     let info: T?
     func removeInfo() -> GenericModel {
@@ -182,6 +177,7 @@ struct BasicUIViewRepresentable: UIViewRepresentable {
         //
     }
 }
+
 struct UITextFiledViewRepresentable: UIViewRepresentable {
 
     @Binding var textUIkit: String
@@ -228,5 +224,4 @@ protocol ColorThemeProtocol {
 struct DefauldAnather: ColorThemeProtocol {
     var primary: Color = .red
     var secondary: Color = .blue
-
 }

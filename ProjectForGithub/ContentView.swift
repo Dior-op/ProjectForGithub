@@ -1,22 +1,16 @@
-//
-//  ContentView.swift
-//  ProjectForGithub
-//
-//  Created by Shahriyor on 06/01/26.
-//
-
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
         
     @StateObject private var gvm = GenericsViewModel()
     @StateObject var vm = MainScreenViewModel()
-    
     @State var sostyaniye: Bool = false
     @State var textTwo: String = "main.history.txt"
     @State var textUIkit: String = ""
 
     var body: some View {
+
         VStack {
             HStack {
                 Text("UIkit:")
